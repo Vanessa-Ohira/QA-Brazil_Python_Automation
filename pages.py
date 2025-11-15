@@ -96,7 +96,7 @@ class UrbanRoutesPage:
         self.driver.find_element(*self.number_enter).send_keys(telefone) #Digitar o numero
         self.driver.find_element(*self.number_confirm).click() #Confirmar o numero
 
-        code = retrieve_phone_code()(self.driver) #achar o erro
+        code = retrieve_phone_code(self.driver) #achar o erro
         code_input = WebDriverWait(self.driver, 3).until(EC.visibility_of_element_located(self.number_code))
         code_input.clear()
         code_input.send_keys(code)
@@ -106,7 +106,7 @@ class UrbanRoutesPage:
 
     def numero_confirmado(self):
         numero = WebDriverWait(self.driver, 10).until(EC.visibility_of_element_located(self.number_finish))
-        return numero_text #achar o erro
+        return numero.text #achar o erro
 
     def click_add_cartao(self,cartao,code):
         self.driver.find_element(*self.add_metodo_pagamento).click()

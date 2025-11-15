@@ -23,7 +23,7 @@ class TestUrbanRoutes:
             print("Não foi possível conectar ao Urban Routes. Verifique se o servidor está ligado e ainda em execução.")
 
     def test_set_route(self):
-        self.driver.get(data.URBAN_ROUTES_URL) #passou
+        self.driver.get(data.URBAN_ROUTES_URL)
         WebDriverWait(self.driver,3)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_locations(data.ADDRESS_FROM, data.ADDRESS_TO)
@@ -33,7 +33,7 @@ class TestUrbanRoutes:
 
 
     def test_select_plan(self):
-        self.driver.get(data.URBAN_ROUTES_URL) #passou
+        self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_locations(data.ADDRESS_FROM, data.ADDRESS_TO)
         routes_page.click_taxi_option()
@@ -54,7 +54,7 @@ class TestUrbanRoutes:
 
 
     def test_fill_card(self):
-        self.driver.get(data.URBAN_ROUTES_URL) #passou
+        self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_locations(data.ADDRESS_FROM, data.ADDRESS_TO)
         routes_page.click_taxi_option()
@@ -65,7 +65,7 @@ class TestUrbanRoutes:
 
 
     def test_comment_for_driver(self):
-        self.driver.get(data.URBAN_ROUTES_URL) #passou
+        self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_locations(data.ADDRESS_FROM, data.ADDRESS_TO)
         routes_page.click_taxi_option()
@@ -75,7 +75,7 @@ class TestUrbanRoutes:
 
 
     def test_order_blanket_and_handkerchiefs(self):
-        self.driver.get(data.URBAN_ROUTES_URL) #passou
+        self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_locations(data.ADDRESS_FROM, data.ADDRESS_TO)
         routes_page.click_taxi_option()
@@ -84,7 +84,7 @@ class TestUrbanRoutes:
         assert routes_page.switch_cobertor_active() is True
 
     def test_order_2_ice_creams(self):
-        self.driver.get(data.URBAN_ROUTES_URL) #passou
+        self.driver.get(data.URBAN_ROUTES_URL)
         routes_page = UrbanRoutesPage(self.driver)
         routes_page.enter_locations(data.ADDRESS_FROM, data.ADDRESS_TO)
         routes_page.click_taxi_option()
